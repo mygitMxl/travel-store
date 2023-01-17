@@ -3,8 +3,12 @@ import styles from "./App.module.css";
 import { Header, Footer,} from "./components";
 import { SideMenu } from './components/sideMenu';
 import {Carousel} from './components/carousel'
-import { Row, Col } from "antd";
-
+import {ProductCollection} from './components/productCollection/productCollection'
+import { productList1, productList2, productList3 } from "./mockups";
+import { Row, Col,Typography } from "antd";
+import sideImage from './assets/images/sider_2019_12-09.png';
+import sideImage2 from './assets/images/sider_2019_02-04.png';
+import sideImage3 from './assets/images/sider_2019_02-04-2.png';
 function App() {
   return (
     <div className={styles.App}>
@@ -19,6 +23,16 @@ function App() {
             <Carousel />
           </Col>
         </Row>
+        <ProductCollection
+          title={
+            <Typography.Title level={3} type="warning">
+              爆款推荐
+            </Typography.Title>
+          }
+           sideImage={sideImage}
+           products={productList1}
+        />
+
       </div>
       <Footer />
     </div>
