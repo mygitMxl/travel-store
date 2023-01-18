@@ -9,12 +9,12 @@ import s3 from '../../assets/images/icon-720944_640.png'
 export const Footer : React.FC = () => {
     return (
       <Layout.Footer>
-        <Typography.Title level={3} style={{ textAlign: "center",overflow:'hidden' }}>
+     <div>
          {arr.forEach(item=>{
           <img src={item} alt="" key={item} />
          })}
-           中
-        </Typography.Title>
+           
+           </div>
       
       </Layout.Footer>
     );
